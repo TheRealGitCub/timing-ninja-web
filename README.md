@@ -1,6 +1,8 @@
 # [TimingNinja.com](http://TimingNinja.com)
 timingninja.com website for @cwsterling's Timing Ninja Complete Race Timing Solution
 
+[![forthebadge](http://forthebadge.com/images/badges/compatibility-club-penguin.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/built-by-developers.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/does-not-contain-msg.svg)](http://forthebadge.com) 
+
 ![Screenshot](https://i.imgur.com/RF1qxw6.jpg)
 
 Based on [Material Design Lite](https://getmdl.io/)
