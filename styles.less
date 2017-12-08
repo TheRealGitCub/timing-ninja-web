@@ -1,0 +1,145 @@
+@color_header_text: white;
+@color_button: white;
+
+@color_primary: #1F96F2;
+
+#main-header {
+	position: fixed;
+	color: @color_header_text;
+	z-index: 101;
+	.mdl-navigation {
+		a {
+			border-bottom: 5px solid transparent; 
+			&:link {
+				color: @color_header_text;
+			}
+			&:visited {
+				color: @color_header_text;
+			}
+			&.is_active {
+				border-bottom-color: @color_primary; 
+			}
+		}
+	}
+	.mdl-layout__drawer-button {
+		color: @color_header_text;
+	}
+}
+
+#header-bg {
+	background: url(img/martins-zemlickis-57243.jpg) center bottom;
+	background-size: cover;
+	width: 100%;
+	height: 67px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	#header-bg-inner {
+		background: rgba(0,0,0,0.4);
+		width: 100%;
+		height: 100%;
+	}
+}
+
+#header-image {
+	background: url(img/martins-zemlickis-57243.jpg) center bottom;
+	background-size: cover;
+	z-index: 100;
+	#header-image-inner {
+		background: rgba(0,0,0,0.4);
+		color: @color_header_text;
+		text-align: center;
+		padding: 15vh 0;
+		h1 {
+			small {
+				opacity: .8;
+			}
+		}
+	}
+	&.header-fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 70px;
+		width: 100%;
+		z-index: 100;
+		#header-image-inner {
+			display: none;
+		}
+	}
+}
+
+#features-list {
+	.mdl-card {
+		&#card-register {
+			.mdl-card__title {
+				color: #fff;
+				background: url(img/bruno-nascimento-149663.jpg) center / cover;
+				height: 176px;
+			}
+			.mdl-card__menu {
+				color: #fff;
+			}
+		}
+		&#card-auto-save {
+			.mdl-card__title {
+				color: #fff;
+				background: url(img/patrick-lindenberg-191841.jpg) center / cover;
+				height: 176px;
+			}
+			.mdl-card__menu {
+				color: #fff;
+			}
+		}
+		&#card-awards {
+			.mdl-card__title {
+				color: #fff;
+				background: url(img/kris-kerr-422325.jpg) center / cover;
+				height: 176px;
+			}
+			.mdl-card__menu {
+				color: #fff;
+			}
+		}
+	}
+}
+
+#pricing-list {
+	.price-per-month {
+		font-size: 3em;
+		padding-top: 10px;
+	}
+}
+
+#signup-text {
+	font-size:1.2em;
+}
+
+hr {
+	margin: 50px 0;
+}
+
+footer {
+	margin-top: 170px; 
+}
+
+.mdl-button--raised.mdl-button--colored {
+	color: @color_button;
+}
+.text-right {
+	text-align: right;
+}
+.text-center {
+	text-align: center;
+}
+
+.mdl-color-text--muted {
+	color: #9e9e9e;
+}
+
+@media screen and (max-width:1024px){
+	.mdl-layout__header{
+		display:flex;
+	}
+}

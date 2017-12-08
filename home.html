@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Timing Ninja</title> 
+	
+	<link rel="stylesheet" href="lib/mdl/material.min.css">
+	<script src="lib/mdl/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	
+	<script
+		src="http://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous"></script>
+		
+	<script src="lib/dialog-polyfill/dialog-polyfill.js"></script>
+	<link rel="stylesheet" href="lib/dialog-polyfill/dialog-polyfill.css"> 
+		
+	<script src="scripts.js"></script> 
+	
+	<link rel="stylesheet" href="styles.css">
+	
+</head>
+<body>
+	
+	<dialog id="dialog" class="mdl-dialog">
+		<h3 class="mdl-dialog__title">Thank you!</h3>
+		<div class="mdl-dialog__content">
+			<p>
+				You are officially signed up for our mailing list.
+			</p>
+		</div>
+		<div class="mdl-dialog__actions">
+			<button type="button" class="mdl-button" id="modal-close">Close</button>
+		</div>
+	</dialog>
+	
+	<div class="mdl-layout mdl-js-layout">
+		<header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--transparent" id="main-header">
+			<div class="mdl-layout__header-row" id="header-navigation">
+				<!-- Title -->
+				<span class="mdl-layout-title hidden mdl-cell--hide-phone" id="small-header-title">Timing Ninja</span>
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer"></div>
+				<!-- Navigation. We hide it in small screens. -->
+				<nav class="mdl-navigation">
+					<a id="link-features" class="mdl-navigation__link" href="#features">Features</a>
+					<a id="link-pricing" class="mdl-navigation__link" href="#pricing">Pricing</a>
+					<a id="link-sign-up" class="mdl-navigation__link" href="#sign-up">Sign Up</a>
+				</nav>
+			</div>
+		</header>
+		<main class="mdl-layout__content">
+			<div class="page-content">
+				
+				<div id="header-bg" class="hidden mdl-shadow--3dp">
+					<div id="header-bg-inner"></div>
+				</div>
+				
+				<div id="header-image" class="mdl-shadow--3dp"> 
+					<div id="header-image-inner" class="mdl-grid">
+						<div class="mdl-cell--12-col" id="header-jumbotron">
+							<h1>Timing Ninja<br /><small>Your Complete Race Timing Solution</small></h1>
+						</div>
+					</div>
+				</div>
+				
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col text-center">
+						<h2 id="features">Features</h2>
+					</div>
+				</div>
+						
+				<div class="mdl-grid" id="features-list">
+					<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-card mdl-shadow--2dp" id="card-register">
+						<div class="mdl-card__title mdl-card--expand">
+							<h2 class="mdl-card__title-text">Race-Day Registration</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							Quickly register new runners in-person on the day of the race. Custom fields allow
+							you to register any type of information about your participants. 
+						</div>
+						<div class="mdl-card__menu">
+							<i class="material-icons">person_add</i>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-card mdl-shadow--2dp" id="card-auto-save">
+						<div class="mdl-card__title mdl-card--expand">
+							<h2 class="mdl-card__title-text">Auto Save</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							Your data is safe in the event of a power loss. Race information is saved locally
+							to the computer, and can easily be resumed once the device is back up.
+						</div>
+						<div class="mdl-card__menu">
+							<i class="material-icons">save</i>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-card mdl-shadow--2dp" id="card-awards">
+						<div class="mdl-card__title mdl-card--expand">
+							<h2 class="mdl-card__title-text">
+								Customizable Awards
+							</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							Generate awards to your specification. By age group, by gender, military branches,
+							Masters, and more! Create your own categories of awards based on your individual race.
+						</div>
+						<div class="mdl-card__menu">
+							<i class="material-icons">star</i>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-card mdl-shadow--2dp" id="card-export">
+						<div class="mdl-card__title">
+							<h2 class="mdl-card__title-text">
+								Data Export
+							</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							Export race data in multiple formats. CSV, XML, JSON, and more options allow you
+							to do whatever you please with your race results.
+						</div>
+						<div class="mdl-card__menu">
+							<i class="material-icons">insert_drive_file</i>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-card mdl-shadow--2dp" id="card-backup">
+						<div class="mdl-card__title">
+							<h2 class="mdl-card__title-text">
+								Cloud Backup &amp; Sync 
+							</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							Take your data from Computer to Computer without worry. All race data can be backed up
+							to Timing Ninja servers.
+						</div>
+						<div class="mdl-card__menu">
+							<i class="material-icons">cloud</i>
+						</div>
+						<div class="mdl-card__actions">
+							<span class="mdl-chip mdl-chip--contact">
+								<span class="mdl-chip__contact mdl-color-text--white mdl-color--accent">$</span>
+								<span class="mdl-chip__text">Addon Feature</span>
+							</span>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-card mdl-shadow--2dp" id="card-publish">
+						<div class="mdl-card__title">
+							<h2 class="mdl-card__title-text">
+								Publish Race Results
+							</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							Share the race's results with your runners on your custom Timing Ninja site. Show 
+							featured awards and a searchable list of runners.
+						</div>
+						<div class="mdl-card__menu">
+							<i class="material-icons">public</i>
+						</div>
+						<div class="mdl-card__actions">
+							<span class="mdl-chip mdl-chip--contact">
+								<span class="mdl-chip__contact mdl-color-text--white mdl-color--accent">$</span>
+								<span class="mdl-chip__text">Addon Feature</span>
+							</span>
+						</div>
+					</div>
+				</div> 
+				
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col text-center">
+						<hr />
+						<h2 id="pricing">Pricing</h2>
+					</div>
+				</div>
+				
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col-phone mdl-cell--6-col-desktop mdl-cell--3-offset-desktop" id="pricing-list">
+						<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+							<div class="mdl-tabs__tab-bar">
+									<a href="#annual-panel" class="mdl-tabs__tab is-active">Annual</a>
+									<a href="#monthly-panel" class="mdl-tabs__tab">Monthly</a>
+							</div>
+						
+							<div class="mdl-tabs__panel is-active" id="annual-panel">
+								<div class="mdl-grid">
+									<div class="mdl-cell mdl-cell--6-col-phone mdl-cell--4-col-desktop mdl-cell--2-offset-desktop">
+										<div class="price-per-month mdl-color-text--primary text-right">$17</div>
+									</div>
+									<div class="mdl-cell mdl-cell--6-col-phone mdl-cell--4-col-desktop">
+										per month<br />
+										<span class="mdl-color-text--muted">$200 billed annually</span>
+									</div>
+								</div>
+								
+								<div class="text-center">
+									<br /><strong>Addons</strong>
+								</div>
+								
+								
+								<ul class="mdl-list">
+									<li class="mdl-list__item mdl-list__item--two-line">
+										<span class="mdl-list__item-primary-content">
+										<i class="material-icons mdl-list__item-icon">library_add</i>
+										<span>Backup &amp; Sync</span>
+										<span class="mdl-list__item-sub-title">$5 per year</span>
+								</span>
+									</li>
+									<li class="mdl-list__item mdl-list__item--two-line">
+										<span class="mdl-list__item-primary-content">
+										<i class="material-icons mdl-list__item-icon">library_add</i>
+										<span>Publish Race Results</span>
+										<span class="mdl-list__item-sub-title">$30 per year</span>
+									</span>
+									</li>
+									<li class="mdl-list__item mdl-list__item--two-line">
+										<span class="mdl-list__item-primary-content">
+										<i class="material-icons mdl-list__item-icon">library_add</i>
+										<span>Custom Domain on Results site</span>
+										<span class="mdl-list__item-sub-title">$10 per year</span>
+									</span>
+									</li>
+								</ul>
+								
+							</div>
+							<div class="mdl-tabs__panel" id="monthly-panel">
+								<div class="mdl-grid">
+									<div class="mdl-cell mdl-cell--4-col mdl-cell--2-offset">
+										<div class="price-per-month mdl-color-text--primary text-right">$20</div>
+									</div>
+									<div class="mdl-cell mdl-cell--4-col">
+										per month<br />
+										&nbsp;
+									</div>
+								</div>
+								
+								<div class="text-center">
+									<br /><strong>Addons (billed annually)</strong>
+								</div>
+								
+								
+								<ul class="mdl-list">
+									<li class="mdl-list__item mdl-list__item--two-line">
+										<span class="mdl-list__item-primary-content">
+										<i class="material-icons mdl-list__item-icon">library_add</i>
+										<span>Backup &amp; Sync</span>
+										<span class="mdl-list__item-sub-title">$5 per year</span>
+								</span>
+									</li>
+									<li class="mdl-list__item mdl-list__item--two-line">
+										<span class="mdl-list__item-primary-content">
+										<i class="material-icons mdl-list__item-icon">library_add</i>
+										<span>Publish Race Results</span>
+										<span class="mdl-list__item-sub-title">$30 per year</span>
+									</span>
+									</li>
+									<li class="mdl-list__item mdl-list__item--two-line">
+										<span class="mdl-list__item-primary-content">
+										<i class="material-icons mdl-list__item-icon">library_add</i>
+										<span>Custom Domain on Results site</span>
+										<span class="mdl-list__item-sub-title">$10 per year</span>
+									</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col text-center">
+						<hr />
+						<h2 id="sign-up">Sign Up</h2>
+					</div>
+				</div>
+				
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col-phone mdl-cell--4-col-desktop mdl-cell--4-offset-desktop">
+						<p id="signup-text" class="text-center">
+							Sign up now for more information about Timing Ninja when it becomes available.
+						</p>
+						<form>
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="email" id="email">
+								<label class="mdl-textfield__label" for="email">Email Address</label>
+							</div>
+							<input type="submit" value="Submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+						</form>
+					</div>
+				</div>
+				
+				<footer class="mdl-mega-footer">
+					<div class="mdl-mega-footer__middle-section">
+				
+						<div class="mdl-mega-footer__drop-down-section">
+							<input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+							<h1 class="mdl-mega-footer__heading">Credits</h1>
+							<ul class="mdl-mega-footer__link-list">
+								<li>
+									<a target="_blank" href="https://unsplash.com/photos/NPFu4GfFZ7E">
+										Runners Photo by Mārtiņš Zemlickis
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://unsplash.com/photos/PHIgYUGQPvU">
+										Shoes on stairs Photo by Bruno Nascimento
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://unsplash.com/photos/1iVKwElWrPA">
+										Hard Drive Photo by Patrick Lindenberg
+									</a>
+								</li>
+								<li>
+									<a target="_blank" href="https://unsplash.com/photos/6X7y8b0IN6M">
+										Medal Photo by Kris Kerr
+									</a>
+								</li>
+								
+								
+							</ul>
+						</div>
+				
+					</div>
+				
+					<div class="mdl-mega-footer__bottom-section">
+						<div class="mdl-logo">Timing Ninja</div>
+						<ul class="mdl-mega-footer__link-list">
+							<li><a href="https://kobitate.com">Website Built by Kobi Tate</a></li>
+							<li><a href="http://chrissterling.me">Timing Ninja created by Chris Sterling</a></li>
+						</ul>
+					</div>
+				
+				</footer>
+			
+			
+			</div>
+		</main>
+	</div>
+	
+</body>
+</html>
